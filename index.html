@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jisham Vallikkadan | Full-Stack Software Engineer & Cloud Architect</title>
+  <meta name="description" content="Portfolio of Jisham Vallikkadan - Senior Full-Stack Software Engineer specializing in modern web applications, cloud architecture, and intuitive digital experiences." />
+  <meta name="keywords" content="Jisham Vallikkadan, Full Stack Engineer, Web Developer, React, Node.js, Cloud Architect, Portfolio, GitHub" />
+  <meta name="author" content="Jisham Vallikkadan" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jisham Vallikkadan | Full-Stack Software Engineer" />
+  <meta property="og:description" content="Crafting high-performance web applications, scalable cloud architecture, and modern digital experiences." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- Ambient Lighting Elements -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" id="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">Jisham</span>
+        <span class="logo-slash">/</span>
+        <span class="logo-text">Portfolio</span>
+        <span class="logo-bracket">&gt;</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> About</a>
+        <a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> Skills</a>
+        <a href="#projects" class="nav-link"><i class="fa-solid fa-laptop-code"></i> Projects</a>
+        <a href="#experience" class="nav-link"><i class="fa-solid fa-briefcase"></i> Experience</a>
+        <a href="#contact" class="nav-link nav-btn"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+      </nav>
+
+      <div class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <canvas id="hero-canvas" class="hero-canvas"></canvas>
+    
+    <div class="hero-content">
+      <div class="status-badge fade-in">
+        <span class="pulse-dot"></span>
+        <span>Available for new projects & opportunities</span>
+      </div>
+
+      <h1 class="hero-title fade-in">
+        Building Next-Gen <br />
+        <span class="gradient-text">Digital Experiences</span>
+      </h1>
+
+      <p class="hero-subtitle fade-in">
+        Hi! I'm <strong class="highlight-name">Jisham Vallikkadan</strong> — a passionate Full-Stack Engineer & Cloud Enthusiast dedicated to turning complex problems into elegant, scalable software solutions.
+      </p>
+
+      <div class="hero-cta fade-in">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fa-solid fa-rocket"></i> View My Work
+        </a>
+        <a href="#contact" class="btn btn-glass">
+          <i class="fa-solid fa-comments"></i> Let's Talk
+        </a>
+        <a href="https://github.com/jisham-vallikkadan" target="_blank" rel="noopener noreferrer" class="btn btn-icon" title="GitHub Profile">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+
+      <div class="hero-socials fade-in">
+        <a href="https://github.com/jisham-vallikkadan" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="mailto:jisham@example.com"><i class="fa-solid fa-envelope"></i> Email</a>
+      </div>
+    </div>
+
+    <div class="hero-visual fade-in">
+      <div class="avatar-card">
+        <div class="avatar-ring"></div>
+        <div class="avatar-inner">
+          <i class="fa-solid fa-code-merge avatar-icon"></i>
+        </div>
+        <div class="floating-chip chip-1">
+          <i class="fa-brands fa-react"></i> React & Vite
+        </div>
+        <div class="floating-chip chip-2">
+          <i class="fa-brands fa-node-js"></i> Node & Python
+        </div>
+        <div class="floating-chip chip-3">
+          <i class="fa-solid fa-cloud"></i> Cloud DevOps
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Statistics Banner -->
+  <section class="stats-banner">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <div class="stat-number" data-target="5">0</div>
+        <div class="stat-plus">+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="30">0</div>
+        <div class="stat-plus">+</div>
+        <div class="stat-label">Completed Projects</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="15">0</div>
+        <div class="stat-plus">+</div>
+        <div class="stat-label">Tech Stack Mastered</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="99">0</div>
+        <div class="stat-plus">%</div>
+        <div class="stat-label">Client Satisfaction</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-user-astronaut"></i> Discover</span>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-description">Crafting modern web software with passion, precision, and engineering excellence.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card glass-card">
+          <div class="card-icon"><i class="fa-solid fa-terminal"></i></div>
+          <h3>Who I Am</h3>
+          <p>
+            I am a full-stack engineer driven by a curiosity for how complex systems interact. Whether building reactive frontends, designing resilient REST/GraphQL APIs, or setting up automated CI/CD pipelines, I craft software that scales effortlessly.
+          </p>
+        </div>
+
+        <div class="about-card glass-card">
+          <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
+          <h3>Engineering Mindset</h3>
+          <p>
+            Clean code, modular architecture, and user-centric design principles guide everything I build. I focus on performance, accessibility, robust security, and seamless developer workflows.
+          </p>
+        </div>
+
+        <div class="about-card glass-card">
+          <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
+          <h3>Continuous Growth</h3>
+          <p>
+            Technology evolves rapidly, and so do I. I actively contribute to open-source software, explore cutting-edge AI frameworks, and continuously sharpen my skill set.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Expertise</span>
+        <h2 class="section-title">Tech Stack & Mastery</h2>
+        <p class="section-description">Languages, frameworks, and modern tools I leverage to engineer solutions.</p>
+      </div>
+
+      <!-- Skills Filter Tabs -->
+      <div class="skills-filter">
+        <button class="filter-btn active" data-filter="all">All Skills</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend & DB</button>
+        <button class="filter-btn" data-filter="cloud">Cloud & DevOps</button>
+        <button class="filter-btn" data-filter="tools">Tools & Workflow</button>
+      </div>
+
+      <div class="skills-grid" id="skills-container">
+        <!-- Skills Cards populated via Javascript or static HTML with data attributes -->
+        <div class="skill-card glass-card" data-category="frontend">
+          <div class="skill-header">
+            <i class="fa-brands fa-html5 skill-icon html-color"></i>
+            <h4>HTML5 & CSS3</h4>
+            <span class="skill-percent">95%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width: 95%"></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card" data-category="frontend">
+          <div class="skill-header">
+            <i class="fa-brands fa-js skill-icon js-color"></i>
+            <h4>JavaScript (ES6+)</h4>
+            <span class="skill-percent">92%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width: 92%"></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card" data-category="frontend">
+          <div class="skill-header">
+            <i class="fa-brands fa-react skill-icon react-color"></i>
+            <h4>React.js & Next.js</h4>
+            <span class="skill-percent">90%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width: 90%"></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card" data-category="backend">
+          <div class="skill-header">
+            <i class="fa-brands fa-node-js skill-icon node-color"></i>
+            <h4>Node.js & Express</h4>
+            <span class="skill-percent">88%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width: 88%"></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card" data-category="backend">
+          <div class="skill-header">
+            <i class="fa-brands fa-python skill-icon python-color"></i>
+            <h4>Python & FastAPI</h4>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width: 85%"></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card" data-category="backend">
+          <div class="skill-header">
+            <i class="fa-solid fa-database skill-icon db-color"></i>
+            <h4>PostgreSQL & MongoDB</h4>
+            <span class="skill-percent">86%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width: 86%"></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card" data-category="cloud">
+          <div class="skill-header">
+            <i class="fa-brands fa-docker skill-icon docker-color"></i>
+            <h4>Docker & Containers</h4>
+            <span class="skill-percent">82%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width: 82%"></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card" data-category="cloud">
+          <div class="skill-header">
+            <i class="fa-brands fa-aws skill-icon aws-color"></i>
+            <h4>AWS & Cloud Hosting</h4>
+            <span class="skill-percent">80%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width: 80%"></div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card" data-category="tools">
+          <div class="skill-header">
+            <i class="fa-brands fa-git-alt skill-icon git-color"></i>
+            <h4>Git & GitHub Actions</h4>
+            <span class="skill-percent">94%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" style="width: 94%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-code-fork"></i> Portfolio</span>
+        <h2 class="section-title">Featured Work & Projects</h2>
+        <p class="section-description">A selection of recent projects built with modern tech stacks.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project Card 1 -->
+        <article class="project-card glass-card">
+          <div class="project-banner project-banner-1">
+            <div class="banner-overlay">
+              <span class="project-category">Cloud & AI</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">AI Analytics Intelligence Dashboard</h3>
+            <p class="project-desc">
+              Real-time analytics platform monitoring data streams, model predictions, and interactive metric visualizers built with React, Vite, and WebSocket connections.
+            </p>
+            <div class="project-tags">
+              <span>React</span>
+              <span>Vite</span>
+              <span>Node.js</span>
+              <span>WebSockets</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/jisham-vallikkadan" target="_blank" class="proj-link"><i class="fa-brands fa-github"></i> Repository</a>
+              <a href="#hero" class="proj-link demo-link"><i class="fa-solid fa-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project Card 2 -->
+        <article class="project-card glass-card">
+          <div class="project-banner project-banner-2">
+            <div class="banner-overlay">
+              <span class="project-category">Full-Stack App</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Cloud Infrastructure Manager</h3>
+            <p class="project-desc">
+              Unified DevOps dashboard providing microservices health tracking, container status monitoring, and automated deployment triggers via GitHub API.
+            </p>
+            <div class="project-tags">
+              <span>TypeScript</span>
+              <span>Python</span>
+              <span>Docker</span>
+              <span>GitHub Actions</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/jisham-vallikkadan" target="_blank" class="proj-link"><i class="fa-brands fa-github"></i> Repository</a>
+              <a href="#hero" class="proj-link demo-link"><i class="fa-solid fa-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project Card 3 -->
+        <article class="project-card glass-card">
+          <div class="project-banner project-banner-3">
+            <div class="banner-overlay">
+              <span class="project-category">Open Source</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Developer Workflow CLI Tool</h3>
+            <p class="project-desc">
+              Lightweight terminal utility automating repository boilerplates, automated git hooks setup, and release package builds.
+            </p>
+            <div class="project-tags">
+              <span>Node.js</span>
+              <span>ES6 Modules</span>
+              <span>CLI</span>
+              <span>npm</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/jisham-vallikkadan" target="_blank" class="proj-link"><i class="fa-brands fa-github"></i> Repository</a>
+              <a href="#hero" class="proj-link demo-link"><i class="fa-solid fa-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience Timeline -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-clock-rotate-left"></i> Career Path</span>
+        <h2 class="section-title">Work Experience & Timeline</h2>
+        <p class="section-description">My professional journey in software engineering and web development.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">2023 - Present</span>
+            <h3>Senior Full-Stack Engineer</h3>
+            <span class="timeline-company"><i class="fa-solid fa-building"></i> Tech Solutions Inc.</span>
+            <p>Architecting responsive client frontends with React and Vite, optimizing REST/GraphQL microservices, and leading cloud deployment pipelines.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">2021 - 2023</span>
+            <h3>Software Developer</h3>
+            <span class="timeline-company"><i class="fa-solid fa-building"></i> Digital Innovations Hub</span>
+            <p>Developed core backend microservices in Node.js and Python, designed database schemas, and improved API response times by 40%.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">2019 - 2021</span>
+            <h3>Frontend Web Developer</h3>
+            <span class="timeline-company"><i class="fa-solid fa-building"></i> Creative Web Agency</span>
+            <p>Built custom responsive websites, interactive UI component libraries, and optimized SEO and web performance for client projects.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> Get In Touch</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-description">Have a project in mind or want to collaborate? Send me a message!</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="contact-info glass-card">
+          <h3>Contact Details</h3>
+          <p>Feel free to reach out via email, social channels, or the contact form.</p>
+
+          <div class="info-list">
+            <div class="info-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <span>Email</span>
+                <a href="mailto:jisham@example.com">jisham@example.com</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fa-brands fa-github"></i>
+              <div>
+                <span>GitHub</span>
+                <a href="https://github.com/jisham-vallikkadan" target="_blank">github.com/jisham-vallikkadan</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <span>Location</span>
+                <p>Global / Remote</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form glass-card" id="contact-form">
+          <h3>Send Message</h3>
+          
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" required placeholder="John Doe" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" required placeholder="john@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" required placeholder="Project Inquiry / Opportunity" />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toast-message">Message sent successfully!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="current-year">2026</span> <strong>Jisham Vallikkadan</strong>. All rights reserved.</p>
+      <a href="#hero" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
