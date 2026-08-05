@@ -40,6 +40,12 @@
             background-size: 200% 200%;
             animation: gradientBG 8s ease infinite;
         }
+        .store-btn {
+            position: relative;
+            z-index: 30;
+            cursor: pointer;
+            pointer-events: auto;
+        }
     </style>
 </head>
 <body class="bg-brandDark text-slate-100 font-sans selection:bg-brandPrimary selection:text-white">
@@ -101,8 +107,8 @@
             </div>
             <!-- Social Quick Links in Hero -->
             <div class="flex justify-center items-center gap-6 mt-8">
-                <a href="https://github.com/jisham-vallikkadan" target="_blank" class="text-slate-400 hover:text-indigo-400 transition text-2xl" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/jisham-vallikkadan" target="_blank" class="text-slate-400 hover:text-indigo-400 transition text-2xl" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/jisham-vallikkadan" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-indigo-400 transition text-2xl" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jisham-vallikkadan" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-indigo-400 transition text-2xl" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
             </div>
         </div>
     </section>
@@ -268,11 +274,14 @@
                 <div class="w-16 h-1 bg-indigo-500 mx-auto rounded-full"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
                 <!-- Project 1: Quran First -->
-                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300 group">
+                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300">
                     <div>
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">Quran First</h3>
+                            <h3 class="text-xl font-bold text-white">
+                                <a href="https://play.google.com/store/apps/details?id=com.alisons.quranfirst&hl=en" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition">Quran First</a>
+                            </h3>
                             <span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Live</span>
                         </div>
                         <p class="text-slate-400 text-sm leading-relaxed mb-6">
@@ -282,21 +291,23 @@
                     <div class="border-t border-slate-800/80 pt-4 flex flex-col gap-3">
                         <div class="text-xs text-slate-500">BLOC • SQLite • Audio</div>
                         <div class="flex flex-wrap gap-2">
-                            <a href="https://play.google.com/store/apps/details?id=com.alisons.quranfirst&hl=en" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-300 text-xs font-semibold border border-indigo-500/30 transition inline-flex items-center gap-1.5">
-                                <i class="fa-brands fa-google-play"></i> Google Play
+                            <a href="https://play.google.com/store/apps/details?id=com.alisons.quranfirst&hl=en" target="_blank" rel="noopener noreferrer" class="store-btn px-3 py-2 rounded-lg bg-emerald-600/30 hover:bg-emerald-600/60 text-emerald-300 text-xs font-bold border border-emerald-500/40 transition inline-flex items-center gap-1.5 shadow-md">
+                                <i class="fa-brands fa-google-play text-sm"></i> Google Play
                             </a>
-                            <a href="https://apps.apple.com/sa/app/quran-first/id900910193" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-purple-600/20 hover:bg-purple-600/40 text-purple-300 text-xs font-semibold border border-purple-500/30 transition inline-flex items-center gap-1.5">
-                                <i class="fa-brands fa-apple"></i> App Store
+                            <a href="https://apps.apple.com/sa/app/quran-first/id900910193" target="_blank" rel="noopener noreferrer" class="store-btn px-3 py-2 rounded-lg bg-indigo-600/30 hover:bg-indigo-600/60 text-indigo-300 text-xs font-bold border border-indigo-500/40 transition inline-flex items-center gap-1.5 shadow-md">
+                                <i class="fa-brands fa-apple text-sm"></i> App Store
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2: Faindr -->
-                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300 group">
+                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300">
                     <div>
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">Faindr</h3>
+                            <h3 class="text-xl font-bold text-white">
+                                <a href="https://play.google.com/store/apps/details?id=com.getoncliq&hl=en" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition">Faindr</a>
+                            </h3>
                             <span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Live</span>
                         </div>
                         <p class="text-slate-400 text-sm leading-relaxed mb-6">
@@ -306,18 +317,20 @@
                     <div class="border-t border-slate-800/80 pt-4 flex flex-col gap-3">
                         <div class="text-xs text-slate-500">Provider • Geo-location</div>
                         <div class="flex flex-wrap gap-2">
-                            <a href="https://play.google.com/store/apps/details?id=com.getoncliq&hl=en" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-300 text-xs font-semibold border border-indigo-500/30 transition inline-flex items-center gap-1.5">
-                                <i class="fa-brands fa-google-play"></i> Google Play
+                            <a href="https://play.google.com/store/apps/details?id=com.getoncliq&hl=en" target="_blank" rel="noopener noreferrer" class="store-btn px-3 py-2 rounded-lg bg-emerald-600/30 hover:bg-emerald-600/60 text-emerald-300 text-xs font-bold border border-emerald-500/40 transition inline-flex items-center gap-1.5 shadow-md">
+                                <i class="fa-brands fa-google-play text-sm"></i> Google Play
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 3: Ridaya Qatar -->
-                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300 group">
+                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300">
                     <div>
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">Ridaya Qatar</h3>
+                            <h3 class="text-xl font-bold text-white">
+                                <a href="https://play.google.com/store/apps/details?id=com.ridayaapp.app" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition">Ridaya Qatar</a>
+                            </h3>
                             <span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Live</span>
                         </div>
                         <p class="text-slate-400 text-sm leading-relaxed mb-6">
@@ -327,21 +340,23 @@
                     <div class="border-t border-slate-800/80 pt-4 flex flex-col gap-3">
                         <div class="text-xs text-slate-500">GetX • MVC • E-commerce</div>
                         <div class="flex flex-wrap gap-2">
-                            <a href="https://play.google.com/store/apps/details?id=com.ridayaapp.app" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-300 text-xs font-semibold border border-indigo-500/30 transition inline-flex items-center gap-1.5">
-                                <i class="fa-brands fa-google-play"></i> Google Play
+                            <a href="https://play.google.com/store/apps/details?id=com.ridayaapp.app" target="_blank" rel="noopener noreferrer" class="store-btn px-3 py-2 rounded-lg bg-emerald-600/30 hover:bg-emerald-600/60 text-emerald-300 text-xs font-bold border border-emerald-500/40 transition inline-flex items-center gap-1.5 shadow-md">
+                                <i class="fa-brands fa-google-play text-sm"></i> Google Play
                             </a>
-                            <a href="https://apps.apple.com/us/app/ridaya-qatar/id6754503680" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-purple-600/20 hover:bg-purple-600/40 text-purple-300 text-xs font-semibold border border-purple-500/30 transition inline-flex items-center gap-1.5">
-                                <i class="fa-brands fa-apple"></i> App Store
+                            <a href="https://apps.apple.com/us/app/ridaya-qatar/id6754503680" target="_blank" rel="noopener noreferrer" class="store-btn px-3 py-2 rounded-lg bg-indigo-600/30 hover:bg-indigo-600/60 text-indigo-300 text-xs font-bold border border-indigo-500/40 transition inline-flex items-center gap-1.5 shadow-md">
+                                <i class="fa-brands fa-apple text-sm"></i> App Store
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 4: Sveston -->
-                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300 group">
+                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300">
                     <div>
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">Sveston</h3>
+                            <h3 class="text-xl font-bold text-white">
+                                <a href="https://play.google.com/store/apps/details?id=com.sveston.app" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition">Sveston</a>
+                            </h3>
                             <span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Live</span>
                         </div>
                         <p class="text-slate-400 text-sm leading-relaxed mb-6">
@@ -351,21 +366,23 @@
                     <div class="border-t border-slate-800/80 pt-4 flex flex-col gap-3">
                         <div class="text-xs text-slate-500">GetX • Secure Checkouts</div>
                         <div class="flex flex-wrap gap-2">
-                            <a href="https://play.google.com/store/apps/details?id=com.sveston.app" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-300 text-xs font-semibold border border-indigo-500/30 transition inline-flex items-center gap-1.5">
-                                <i class="fa-brands fa-google-play"></i> Google Play
+                            <a href="https://play.google.com/store/apps/details?id=com.sveston.app" target="_blank" rel="noopener noreferrer" class="store-btn px-3 py-2 rounded-lg bg-emerald-600/30 hover:bg-emerald-600/60 text-emerald-300 text-xs font-bold border border-emerald-500/40 transition inline-flex items-center gap-1.5 shadow-md">
+                                <i class="fa-brands fa-google-play text-sm"></i> Google Play
                             </a>
-                            <a href="https://apps.apple.com/us/app/sveston/id6761650088" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-purple-600/20 hover:bg-purple-600/40 text-purple-300 text-xs font-semibold border border-purple-500/30 transition inline-flex items-center gap-1.5">
-                                <i class="fa-brands fa-apple"></i> App Store
+                            <a href="https://apps.apple.com/us/app/sveston/id6761650088" target="_blank" rel="noopener noreferrer" class="store-btn px-3 py-2 rounded-lg bg-indigo-600/30 hover:bg-indigo-600/60 text-indigo-300 text-xs font-bold border border-indigo-500/40 transition inline-flex items-center gap-1.5 shadow-md">
+                                <i class="fa-brands fa-apple text-sm"></i> App Store
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 5: Lead Softy -->
-                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300 group">
+                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300">
                     <div>
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">Lead Softy</h3>
+                            <h3 class="text-xl font-bold text-white">
+                                <a href="https://play.google.com/store/apps/details?id=com.butomy.leadSofti" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition">Lead Softy</a>
+                            </h3>
                             <span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Live</span>
                         </div>
                         <p class="text-slate-400 text-sm leading-relaxed mb-6">
@@ -375,18 +392,20 @@
                     <div class="border-t border-slate-800/80 pt-4 flex flex-col gap-3">
                         <div class="text-xs text-slate-500">Provider • WebSockets • Stripe</div>
                         <div class="flex flex-wrap gap-2">
-                            <a href="https://play.google.com/store/apps/details?id=com.butomy.leadSofti" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-300 text-xs font-semibold border border-indigo-500/30 transition inline-flex items-center gap-1.5">
-                                <i class="fa-brands fa-google-play"></i> Google Play
+                            <a href="https://play.google.com/store/apps/details?id=com.butomy.leadSofti" target="_blank" rel="noopener noreferrer" class="store-btn px-3 py-2 rounded-lg bg-emerald-600/30 hover:bg-emerald-600/60 text-emerald-300 text-xs font-bold border border-emerald-500/40 transition inline-flex items-center gap-1.5 shadow-md">
+                                <i class="fa-brands fa-google-play text-sm"></i> Google Play
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 6: Linden Edu Care -->
-                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300 group">
+                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300">
                     <div>
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">Linden Edu Care</h3>
+                            <h3 class="text-xl font-bold text-white">
+                                <a href="https://play.google.com/store/apps/details?id=com.lindenEduCare.app&hl=en" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition">Linden Edu Care</a>
+                            </h3>
                             <span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Live</span>
                         </div>
                         <p class="text-slate-400 text-sm leading-relaxed mb-6">
@@ -396,11 +415,11 @@
                     <div class="border-t border-slate-800/80 pt-4 flex flex-col gap-3">
                         <div class="text-xs text-slate-500">Flutter • EdTech • Mobile API</div>
                         <div class="flex flex-wrap gap-2">
-                            <a href="https://play.google.com/store/apps/details?id=com.lindenEduCare.app&hl=en" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-300 text-xs font-semibold border border-indigo-500/30 transition inline-flex items-center gap-1.5">
-                                <i class="fa-brands fa-google-play"></i> Google Play
+                            <a href="https://play.google.com/store/apps/details?id=com.lindenEduCare.app&hl=en" target="_blank" rel="noopener noreferrer" class="store-btn px-3 py-2 rounded-lg bg-emerald-600/30 hover:bg-emerald-600/60 text-emerald-300 text-xs font-bold border border-emerald-500/40 transition inline-flex items-center gap-1.5 shadow-md">
+                                <i class="fa-brands fa-google-play text-sm"></i> Google Play
                             </a>
-                            <a href="https://apps.apple.com/us/app/linden-edu-care/id6752765925" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-purple-600/20 hover:bg-purple-600/40 text-purple-300 text-xs font-semibold border border-purple-500/30 transition inline-flex items-center gap-1.5">
-                                <i class="fa-brands fa-apple"></i> App Store
+                            <a href="https://apps.apple.com/us/app/linden-edu-care/id6752765925" target="_blank" rel="noopener noreferrer" class="store-btn px-3 py-2 rounded-lg bg-indigo-600/30 hover:bg-indigo-600/60 text-indigo-300 text-xs font-bold border border-indigo-500/40 transition inline-flex items-center gap-1.5 shadow-md">
+                                <i class="fa-brands fa-apple text-sm"></i> App Store
                             </a>
                         </div>
                     </div>
@@ -425,7 +444,7 @@
                     <i class="fa-solid fa-phone text-emerald-400 text-lg"></i>
                     <span class="font-medium text-sm">0507190372</span>
                 </a>
-                <a href="https://wa.me/919961333048" target="_blank" class="flex items-center gap-3 px-6 py-4 rounded-xl bg-brandCard border border-slate-800 hover:border-indigo-500 transition text-slate-200">
+                <a href="https://wa.me/919961333048" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 px-6 py-4 rounded-xl bg-brandCard border border-slate-800 hover:border-indigo-500 transition text-slate-200">
                     <i class="fa-brands fa-whatsapp text-emerald-500 text-lg"></i>
                     <span class="font-medium text-sm">+91 9961333048</span>
                 </a>
