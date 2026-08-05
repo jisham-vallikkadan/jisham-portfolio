@@ -1,520 +1,416 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jisham Vallikkadan | Full-Stack Software Engineer & Cloud Architect</title>
-  <meta name="description" content="Portfolio of Jisham Vallikkadan - Senior Full-Stack Software Engineer specializing in modern web applications, cloud architecture, and intuitive digital experiences." />
-  <meta name="keywords" content="Jisham Vallikkadan, Full Stack Engineer, Web Developer, React, Node.js, Cloud Architect, Portfolio, GitHub" />
-  <meta name="author" content="Jisham Vallikkadan" />
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Jisham Vallikkadan | Full-Stack Software Engineer" />
-  <meta property="og:description" content="Crafting high-performance web applications, scalable cloud architecture, and modern digital experiences." />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <link rel="stylesheet" href="./styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jisham V | Flutter Developer Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Animate.css for quick entrance effects -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brandDark: '#0B0F19',
+                        brandCard: '#111827',
+                        brandPrimary: '#6366F1',
+                        brandAccent: '#A855F7',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom smooth gradient animation */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradientBG 8s ease infinite;
+        }
+    </style>
 </head>
-<body>
-  <!-- Ambient Lighting Elements -->
-  <div class="ambient-glow glow-1"></div>
-  <div class="ambient-glow glow-2"></div>
-  <div class="ambient-glow glow-3"></div>
+<body class="bg-brandDark text-slate-100 font-sans selection:bg-brandPrimary selection:text-white">
 
-  <!-- Navigation Bar -->
-  <header class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo" id="nav-logo">
-        <span class="logo-bracket">&lt;</span>
-        <span class="logo-text">Jisham</span>
-        <span class="logo-slash">/</span>
-        <span class="logo-text">Portfolio</span>
-        <span class="logo-bracket">&gt;</span>
-      </a>
-
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> About</a>
-        <a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> Skills</a>
-        <a href="#projects" class="nav-link"><i class="fa-solid fa-laptop-code"></i> Projects</a>
-        <a href="#experience" class="nav-link"><i class="fa-solid fa-briefcase"></i> Experience</a>
-        <a href="#contact" class="nav-link nav-btn"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
-      </nav>
-
-      <div class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <canvas id="hero-canvas" class="hero-canvas"></canvas>
-    
-    <div class="hero-content">
-      <div class="status-badge fade-in">
-        <span class="pulse-dot"></span>
-        <span>Available for new projects & opportunities</span>
-      </div>
-
-      <h1 class="hero-title fade-in">
-        Building Next-Gen <br />
-        <span class="gradient-text">Digital Experiences</span>
-      </h1>
-
-      <p class="hero-subtitle fade-in">
-        Hi! I'm <strong class="highlight-name">Jisham Vallikkadan</strong> — a passionate Full-Stack Engineer & Cloud Enthusiast dedicated to turning complex problems into elegant, scalable software solutions.
-      </p>
-
-      <div class="hero-cta fade-in">
-        <a href="#projects" class="btn btn-primary">
-          <i class="fa-solid fa-rocket"></i> View My Work
-        </a>
-        <a href="#contact" class="btn btn-glass">
-          <i class="fa-solid fa-comments"></i> Let's Talk
-        </a>
-        <a href="https://github.com/jisham-vallikkadan" target="_blank" rel="noopener noreferrer" class="btn btn-icon" title="GitHub Profile">
-          <i class="fa-brands fa-github"></i>
-        </a>
-      </div>
-
-      <div class="hero-socials fade-in">
-        <a href="https://github.com/jisham-vallikkadan" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-        <a href="mailto:jisham@example.com"><i class="fa-solid fa-envelope"></i> Email</a>
-      </div>
-    </div>
-
-    <div class="hero-visual fade-in">
-      <div class="avatar-card">
-        <div class="avatar-ring"></div>
-        <div class="avatar-inner">
-          <i class="fa-solid fa-code-merge avatar-icon"></i>
+    <!-- HEADER / NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brandDark/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-2xl font-extrabold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                Jisham.dev
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-indigo-400 transition">About</a>
+                <a href="#skills" class="hover:text-indigo-400 transition">Skills</a>
+                <a href="#experience" class="hover:text-indigo-400 transition">Experience</a>
+                <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
+                <a href="#contact" class="px-4 py-2 rounded-full bg-indigo-600 text-white hover:bg-indigo-500 transition shadow-lg shadow-indigo-500/25">Let's Talk</a>
+            </nav>
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" class="md:hidden text-slate-300 focus:outline-none text-xl" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
-        <div class="floating-chip chip-1">
-          <i class="fa-brands fa-react"></i> React & Vite
+        <!-- Mobile Nav Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brandCard border-b border-slate-800 px-6 py-4 space-y-3">
+            <a href="#about" class="block text-slate-300 hover:text-indigo-400">About</a>
+            <a href="#skills" class="block text-slate-300 hover:text-indigo-400">Skills</a>
+            <a href="#experience" class="block text-slate-300 hover:text-indigo-400">Experience</a>
+            <a href="#projects" class="block text-slate-300 hover:text-indigo-400">Projects</a>
+            <a href="#contact" class="block text-indigo-400 font-semibold">Contact Me</a>
         </div>
-        <div class="floating-chip chip-2">
-          <i class="fa-brands fa-node-js"></i> Node & Python
-        </div>
-        <div class="floating-chip chip-3">
-          <i class="fa-solid fa-cloud"></i> Cloud DevOps
-        </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Key Statistics Banner -->
-  <section class="stats-banner">
-    <div class="container stats-grid">
-      <div class="stat-item">
-        <div class="stat-number" data-target="5">0</div>
-        <div class="stat-plus">+</div>
-        <div class="stat-label">Years Experience</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number" data-target="30">0</div>
-        <div class="stat-plus">+</div>
-        <div class="stat-label">Completed Projects</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number" data-target="15">0</div>
-        <div class="stat-plus">+</div>
-        <div class="stat-label">Tech Stack Mastered</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number" data-target="99">0</div>
-        <div class="stat-plus">%</div>
-        <div class="stat-label">Client Satisfaction</div>
-      </div>
-    </div>
-  </section>
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Glow Blobs -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
 
-  <!-- About Section -->
-  <section class="about section" id="about">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag"><i class="fa-solid fa-user-astronaut"></i> Discover</span>
-        <h2 class="section-title">About Me</h2>
-        <p class="section-description">Crafting modern web software with passion, precision, and engineering excellence.</p>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-card glass-card">
-          <div class="card-icon"><i class="fa-solid fa-terminal"></i></div>
-          <h3>Who I Am</h3>
-          <p>
-            I am a full-stack engineer driven by a curiosity for how complex systems interact. Whether building reactive frontends, designing resilient REST/GraphQL APIs, or setting up automated CI/CD pipelines, I craft software that scales effortlessly.
-          </p>
-        </div>
-
-        <div class="about-card glass-card">
-          <div class="card-icon"><i class="fa-solid fa-gears"></i></div>
-          <h3>Engineering Mindset</h3>
-          <p>
-            Clean code, modular architecture, and user-centric design principles guide everything I build. I focus on performance, accessibility, robust security, and seamless developer workflows.
-          </p>
-        </div>
-
-        <div class="about-card glass-card">
-          <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
-          <h3>Continuous Growth</h3>
-          <p>
-            Technology evolves rapidly, and so do I. I actively contribute to open-source software, explore cutting-edge AI frameworks, and continuously sharpen my skill set.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section class="skills section" id="skills">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Expertise</span>
-        <h2 class="section-title">Tech Stack & Mastery</h2>
-        <p class="section-description">Languages, frameworks, and modern tools I leverage to engineer solutions.</p>
-      </div>
-
-      <!-- Skills Filter Tabs -->
-      <div class="skills-filter">
-        <button class="filter-btn active" data-filter="all">All Skills</button>
-        <button class="filter-btn" data-filter="frontend">Frontend</button>
-        <button class="filter-btn" data-filter="backend">Backend & DB</button>
-        <button class="filter-btn" data-filter="cloud">Cloud & DevOps</button>
-        <button class="filter-btn" data-filter="tools">Tools & Workflow</button>
-      </div>
-
-      <div class="skills-grid" id="skills-container">
-        <!-- Skills Cards populated via Javascript or static HTML with data attributes -->
-        <div class="skill-card glass-card" data-category="frontend">
-          <div class="skill-header">
-            <i class="fa-brands fa-html5 skill-icon html-color"></i>
-            <h4>HTML5 & CSS3</h4>
-            <span class="skill-percent">95%</span>
-          </div>
-          <div class="skill-bar-track">
-            <div class="skill-bar-fill" style="width: 95%"></div>
-          </div>
-        </div>
-
-        <div class="skill-card glass-card" data-category="frontend">
-          <div class="skill-header">
-            <i class="fa-brands fa-js skill-icon js-color"></i>
-            <h4>JavaScript (ES6+)</h4>
-            <span class="skill-percent">92%</span>
-          </div>
-          <div class="skill-bar-track">
-            <div class="skill-bar-fill" style="width: 92%"></div>
-          </div>
-        </div>
-
-        <div class="skill-card glass-card" data-category="frontend">
-          <div class="skill-header">
-            <i class="fa-brands fa-react skill-icon react-color"></i>
-            <h4>React.js & Next.js</h4>
-            <span class="skill-percent">90%</span>
-          </div>
-          <div class="skill-bar-track">
-            <div class="skill-bar-fill" style="width: 90%"></div>
-          </div>
-        </div>
-
-        <div class="skill-card glass-card" data-category="backend">
-          <div class="skill-header">
-            <i class="fa-brands fa-node-js skill-icon node-color"></i>
-            <h4>Node.js & Express</h4>
-            <span class="skill-percent">88%</span>
-          </div>
-          <div class="skill-bar-track">
-            <div class="skill-bar-fill" style="width: 88%"></div>
-          </div>
-        </div>
-
-        <div class="skill-card glass-card" data-category="backend">
-          <div class="skill-header">
-            <i class="fa-brands fa-python skill-icon python-color"></i>
-            <h4>Python & FastAPI</h4>
-            <span class="skill-percent">85%</span>
-          </div>
-          <div class="skill-bar-track">
-            <div class="skill-bar-fill" style="width: 85%"></div>
-          </div>
-        </div>
-
-        <div class="skill-card glass-card" data-category="backend">
-          <div class="skill-header">
-            <i class="fa-solid fa-database skill-icon db-color"></i>
-            <h4>PostgreSQL & MongoDB</h4>
-            <span class="skill-percent">86%</span>
-          </div>
-          <div class="skill-bar-track">
-            <div class="skill-bar-fill" style="width: 86%"></div>
-          </div>
-        </div>
-
-        <div class="skill-card glass-card" data-category="cloud">
-          <div class="skill-header">
-            <i class="fa-brands fa-docker skill-icon docker-color"></i>
-            <h4>Docker & Containers</h4>
-            <span class="skill-percent">82%</span>
-          </div>
-          <div class="skill-bar-track">
-            <div class="skill-bar-fill" style="width: 82%"></div>
-          </div>
-        </div>
-
-        <div class="skill-card glass-card" data-category="cloud">
-          <div class="skill-header">
-            <i class="fa-brands fa-aws skill-icon aws-color"></i>
-            <h4>AWS & Cloud Hosting</h4>
-            <span class="skill-percent">80%</span>
-          </div>
-          <div class="skill-bar-track">
-            <div class="skill-bar-fill" style="width: 80%"></div>
-          </div>
-        </div>
-
-        <div class="skill-card glass-card" data-category="tools">
-          <div class="skill-header">
-            <i class="fa-brands fa-git-alt skill-icon git-color"></i>
-            <h4>Git & GitHub Actions</h4>
-            <span class="skill-percent">94%</span>
-          </div>
-          <div class="skill-bar-track">
-            <div class="skill-bar-fill" style="width: 94%"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Projects Section -->
-  <section class="projects section" id="projects">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag"><i class="fa-solid fa-code-fork"></i> Portfolio</span>
-        <h2 class="section-title">Featured Work & Projects</h2>
-        <p class="section-description">A selection of recent projects built with modern tech stacks.</p>
-      </div>
-
-      <div class="projects-grid">
-        <!-- Project Card 1 -->
-        <article class="project-card glass-card">
-          <div class="project-banner project-banner-1">
-            <div class="banner-overlay">
-              <span class="project-category">Cloud & AI</span>
+        <div class="max-w-4xl mx-auto px-6 text-center z-10 animate__animated animate__fadeInUp">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold uppercase tracking-wider mb-6">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Available for Immediate Joining
             </div>
-          </div>
-          <div class="project-body">
-            <h3 class="project-title">AI Analytics Intelligence Dashboard</h3>
-            <p class="project-desc">
-              Real-time analytics platform monitoring data streams, model predictions, and interactive metric visualizers built with React, Vite, and WebSocket connections.
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
+                Hi, I'm <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">Jisham V</span>
+            </h1>
+            <p class="text-xl sm:text-2xl font-semibold text-slate-400 mb-6">
+                Flutter Developer with <span class="text-indigo-300">3+ Years</span> of Experience
             </p>
-            <div class="project-tags">
-              <span>React</span>
-              <span>Vite</span>
-              <span>Node.js</span>
-              <span>WebSockets</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/jisham-vallikkadan" target="_blank" class="proj-link"><i class="fa-brands fa-github"></i> Repository</a>
-              <a href="#hero" class="proj-link demo-link"><i class="fa-solid fa-up-right-from-square"></i> Live Demo</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project Card 2 -->
-        <article class="project-card glass-card">
-          <div class="project-banner project-banner-2">
-            <div class="banner-overlay">
-              <span class="project-category">Full-Stack App</span>
-            </div>
-          </div>
-          <div class="project-body">
-            <h3 class="project-title">Cloud Infrastructure Manager</h3>
-            <p class="project-desc">
-              Unified DevOps dashboard providing microservices health tracking, container status monitoring, and automated deployment triggers via GitHub API.
+            <p class="max-w-2xl mx-auto text-slate-400 text-base sm:text-lg mb-10 leading-relaxed">
+                Result-driven developer building, optimizing, and deploying high-quality cross-platform mobile applications for Android and iOS with clean architecture.
             </p>
-            <div class="project-tags">
-              <span>TypeScript</span>
-              <span>Python</span>
-              <span>Docker</span>
-              <span>GitHub Actions</span>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="#projects" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold shadow-xl shadow-indigo-600/30 hover:opacity-90 transition transform hover:-translate-y-0.5">
+                    Explore Projects <i class="fa-solid fa-arrow-down ml-2"></i>
+                </a>
+                <a href="#contact" class="px-8 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold border border-slate-700 transition">
+                    Get in Touch
+                </a>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/jisham-vallikkadan" target="_blank" class="proj-link"><i class="fa-brands fa-github"></i> Repository</a>
-              <a href="#hero" class="proj-link demo-link"><i class="fa-solid fa-up-right-from-square"></i> Live Demo</a>
-            </div>
-          </div>
-        </article>
+        </div>
+    </section>
 
-        <!-- Project Card 3 -->
-        <article class="project-card glass-card">
-          <div class="project-banner project-banner-3">
-            <div class="banner-overlay">
-              <span class="project-category">Open Source</span>
+    <!-- ABOUT / PROFILE SUMMARY -->
+    <section id="about" class="py-24 bg-brandCard/50 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-3">Professional Summary</h2>
+                <div class="w-16 h-1 bg-indigo-500 mx-auto rounded-full"></div>
             </div>
-          </div>
-          <div class="project-body">
-            <h3 class="project-title">Developer Workflow CLI Tool</h3>
-            <p class="project-desc">
-              Lightweight terminal utility automating repository boilerplates, automated git hooks setup, and release package builds.
+            <div class="bg-brandCard border border-slate-800 p-8 sm:p-10 rounded-2xl shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 rounded-bl-full pointer-events-none"></div>
+                <p class="text-slate-300 text-lg leading-relaxed mb-6">
+                    Result-driven Flutter Developer with 3+ years of professional experience building, optimizing, and deploying high-quality cross-platform mobile applications for Android and iOS. Demonstrates strong expertise in Dart, state management (Bloc, Provider, GetX), REST APIs, Firebase services, and secure payment gateway integrations.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-slate-800/80 text-center sm:text-left">
+                    <div>
+                        <span class="block text-xs uppercase tracking-wider text-slate-500 font-semibold">Location</span>
+                        <span class="text-slate-200 font-medium">Jeddah, Saudi Arabia</span>
+                    </div>
+                    <div>
+                        <span class="block text-xs uppercase tracking-wider text-slate-500 font-semibold">Iqama Status</span>
+                        <span class="text-emerald-400 font-medium">Valid & Transferable</span>
+                    </div>
+                    <div>
+                        <span class="block text-xs uppercase tracking-wider text-slate-500 font-semibold">Education</span>
+                        <span class="text-slate-200 font-medium">BSc Computer Science</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section id="skills" class="py-24">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-3">Technical Stack</h2>
+                <div class="w-16 h-1 bg-indigo-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Skill Group 1 -->
+                <div class="bg-brandCard border border-slate-800 p-6 rounded-2xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-indigo-400 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-code"></i> Languages & Architecture
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">Dart</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">JavaScript</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">Flutter</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">MVVM</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">DDD</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">MVC</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">Clean Architecture</span>
+                    </div>
+                </div>
+                <!-- Skill Group 2 -->
+                <div class="bg-brandCard border border-slate-800 p-6 rounded-2xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-purple-400 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group"></i> State & Backend
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">Bloc</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">Provider</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">GetX</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">REST APIs</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">Firebase (Auth, FCM)</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">Stripe & Razorpay</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">WebSockets</span>
+                    </div>
+                </div>
+                <!-- Skill Group 3 -->
+                <div class="bg-brandCard border border-slate-800 p-6 rounded-2xl shadow-lg md:col-span-2">
+                    <h3 class="text-xl font-semibold text-pink-400 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-toolbox"></i> Tools & Storage
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">Android Studio</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">VS Code</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">Git</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">Postman</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">Figma</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">SQLite</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">Hive</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 text-sm font-medium border border-slate-700">Shared Preferences</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section id="experience" class="py-24 bg-brandCard/50 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-3">Work Experience</h2>
+                <div class="w-16 h-1 bg-indigo-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="space-y-8 relative before:absolute before:inset-0 before:left-4 before:w-0.5 before:bg-slate-800">
+                <!-- Job 1 -->
+                <div class="relative pl-10">
+                    <div class="absolute left-2.5 top-1.5 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-indigo-500 ring-4 ring-brandDark"></div>
+                    <div class="bg-brandCard border border-slate-800 p-6 rounded-2xl shadow-lg">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Flutter Developer</h3>
+                                <p class="text-indigo-400 font-medium">Alisons Informatics (P) Ltd</p>
+                            </div>
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 mt-2 sm:mt-0 w-max">Nov 2024 - May 2026</span>
+                        </div>
+                        <ul class="space-y-2 text-slate-300 text-sm list-disc list-inside">
+                            <li>Developing and architecting highly scalable cross-platform applications for iOS and Android environments leveraging clean architecture methodologies.</li>
+                            <li>Implementing and standardizing state management tools including Bloc, Provider, and GetX across teams to dramatically improve modularity, application maintainability, and runtime performance.</li>
+                            <li>Integrating complex REST APIs, secure authentication systems via Firebase Auth, targeted push notifications with Firebase Cloud Messaging (FCM), and end-to-end Stripe payment gateways.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Job 2 -->
+                <div class="relative pl-10">
+                    <div class="absolute left-2.5 top-1.5 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-purple-500 ring-4 ring-brandDark"></div>
+                    <div class="bg-brandCard border border-slate-800 p-6 rounded-2xl shadow-lg">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Flutter Developer</h3>
+                                <p class="text-purple-400 font-medium">Tech Butomy (P) Ltd</p>
+                            </div>
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 mt-2 sm:mt-0 w-max">Mar 2023 - Oct 2024</span>
+                        </div>
+                        <ul class="space-y-2 text-slate-300 text-sm list-disc list-inside">
+                            <li>Engineered production-grade mobile applications built for heavy consumer usage across healthcare, fintech, and service-booking domains.</li>
+                            <li>Utilized robust Bloc and Provider configurations for architectural state management, successfully mitigating UI lag and improving app stability metrics.</li>
+                            <li>Managed end-to-end production pipeline deployments to the Google Play Store and integrated advanced real-time communications using WebSockets.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Job 3 -->
+                <div class="relative pl-10">
+                    <div class="absolute left-2.5 top-1.5 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-pink-500 ring-4 ring-brandDark"></div>
+                    <div class="bg-brandCard border border-slate-800 p-6 rounded-2xl shadow-lg">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Flutter Developer Intern</h3>
+                                <p class="text-pink-400 font-medium">MaiTexa Technologies Pvt Ltd</p>
+                            </div>
+                            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-pink-500/10 text-pink-400 border border-pink-500/20 mt-2 sm:mt-0 w-max">Aug 2022 - Jan 2023</span>
+                        </div>
+                        <ul class="space-y-2 text-slate-300 text-sm list-disc list-inside">
+                            <li>Focused heavily on responsive, pixel-perfect UI development and clean REST API integrations.</li>
+                            <li>Constructed extensible, reusable UI widgets to streamline development workflows across the team.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SELECTED PROJECTS -->
+    <section id="projects" class="py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-3">Featured Projects</h2>
+                <div class="w-16 h-1 bg-indigo-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300 group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">Quran First</h3>
+                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Live</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Comprehensive Islamic utility app built with BLOC architecture featuring background audio player, multi-language toggles, SQLite database, bookmarking, and GPS Qibla compass.
+                        </p>
+                    </div>
+                    <div class="border-t border-slate-800/80 pt-4 flex items-center justify-between text-xs text-slate-500">
+                        <span>BLOC • SQLite • Audio</span>
+                        <span class="text-indigo-400 font-medium">Google Play & App Store</span>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300 group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">Faindr</h3>
+                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Live</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Hyper-local marketplace platform built using Provider for reactive state handling. Features intuitive geo-location discovery, merchant rating systems, and recommendation engines.
+                        </p>
+                    </div>
+                    <div class="border-t border-slate-800/80 pt-4 flex items-center justify-between text-xs text-slate-500">
+                        <span>Provider • Geo-location</span>
+                        <span class="text-indigo-400 font-medium">Google Play Store</span>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300 group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">Ridaya Qatar</h3>
+                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Live</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            All-in-one e-commerce and logistics app for quick delivery across Qatar. Built with GetX and MVC pattern to optimize checkout workflows and fluid transactional pipelines.
+                        </p>
+                    </div>
+                    <div class="border-t border-slate-800/80 pt-4 flex items-center justify-between text-xs text-slate-500">
+                        <span>GetX • MVC • E-commerce</span>
+                        <span class="text-indigo-400 font-medium">Google Play & App Store</span>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300 group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">Sveston</h3>
+                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Live</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Premium fashion watches shopping platform engineered with GetX and MVC. Features interactive product gallery, custom filters, optimized image arrays, and secure payments.
+                        </p>
+                    </div>
+                    <div class="border-t border-slate-800/80 pt-4 flex items-center justify-between text-xs text-slate-500">
+                        <span>GetX • Secure Checkouts</span>
+                        <span class="text-indigo-400 font-medium">Google Play & App Store</span>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300 group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">Lead Softy</h3>
+                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Live</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Sales optimization app using Provider and MVVM architecture. Integrated high-performance WebSockets for real-time team chat, Stripe framework, and Firebase cloud alerts.
+                        </p>
+                    </div>
+                    <div class="border-t border-slate-800/80 pt-4 flex items-center justify-between text-xs text-slate-500">
+                        <span>Provider • WebSockets • Stripe</span>
+                        <span class="text-indigo-400 font-medium">Google Play Store</span>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="bg-brandCard border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500/50 transition duration-300 group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition">Task Berry</h3>
+                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">Internal</span>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Service booking portal with GetX and MVC. Coordinates service appointments, live order tracking panels, peer-to-peer real-time communication, and Stripe payment modules.
+                        </p>
+                    </div>
+                    <div class="border-t border-slate-800/80 pt-4 flex items-center justify-between text-xs text-slate-500">
+                        <span>GetX • WebSockets</span>
+                        <span class="text-amber-400 font-medium">Enterprise App</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / FOOTER -->
+    <section id="contact" class="py-24 bg-brandCard/50 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-3">Let's Build Something Together</h2>
+            <p class="text-slate-400 mb-10 max-w-lg mx-auto">
+                I am immediately available for new opportunities in Jeddah, Saudi Arabia or remote roles. Get in touch via email or phone!
             </p>
-            <div class="project-tags">
-              <span>Node.js</span>
-              <span>ES6 Modules</span>
-              <span>CLI</span>
-              <span>npm</span>
+            <div class="flex flex-wrap justify-center gap-6 mb-12">
+                <a href="mailto:jishamvallikkadan@gmail.com" class="flex items-center gap-3 px-6 py-4 rounded-xl bg-brandCard border border-slate-800 hover:border-indigo-500 transition text-slate-200">
+                    <i class="fa-solid fa-envelope text-indigo-400 text-lg"></i>
+                    <span class="font-medium text-sm">jishamvallikkadan@gmail.com</span>
+                </a>
+                <a href="tel:0507190372" class="flex items-center gap-3 px-6 py-4 rounded-xl bg-brandCard border border-slate-800 hover:border-indigo-500 transition text-slate-200">
+                    <i class="fa-solid fa-phone text-emerald-400 text-lg"></i>
+                    <span class="font-medium text-sm">0507190372</span>
+                </a>
+                <a href="https://wa.me/919961333048" target="_blank" class="flex items-center gap-3 px-6 py-4 rounded-xl bg-brandCard border border-slate-800 hover:border-indigo-500 transition text-slate-200">
+                    <i class="fa-brands fa-whatsapp text-emerald-500 text-lg"></i>
+                    <span class="font-medium text-sm">+91 9961333048</span>
+                </a>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/jisham-vallikkadan" target="_blank" class="proj-link"><i class="fa-brands fa-github"></i> Repository</a>
-              <a href="#hero" class="proj-link demo-link"><i class="fa-solid fa-up-right-from-square"></i> Live Demo</a>
+            <div class="flex justify-center gap-6 text-xl text-slate-400 mb-8">
+                <a href="https://github.com/jisham-vallikkadan" target="_blank" class="hover:text-indigo-400 transition" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="hover:text-indigo-400 transition" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
             </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Work Experience Timeline -->
-  <section class="experience section" id="experience">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag"><i class="fa-solid fa-clock-rotate-left"></i> Career Path</span>
-        <h2 class="section-title">Work Experience & Timeline</h2>
-        <p class="section-description">My professional journey in software engineering and web development.</p>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content glass-card">
-            <span class="timeline-date">2023 - Present</span>
-            <h3>Senior Full-Stack Engineer</h3>
-            <span class="timeline-company"><i class="fa-solid fa-building"></i> Tech Solutions Inc.</span>
-            <p>Architecting responsive client frontends with React and Vite, optimizing REST/GraphQL microservices, and leading cloud deployment pipelines.</p>
-          </div>
+            <p class="text-xs text-slate-600">
+                © 2026 Jisham V. All rights reserved. Built with Tailwind CSS.
+            </p>
         </div>
+    </section>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content glass-card">
-            <span class="timeline-date">2021 - 2023</span>
-            <h3>Software Developer</h3>
-            <span class="timeline-company"><i class="fa-solid fa-building"></i> Digital Innovations Hub</span>
-            <p>Developed core backend microservices in Node.js and Python, designed database schemas, and improved API response times by 40%.</p>
-          </div>
-        </div>
+    <!-- JavaScript for Mobile Menu Interaction -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content glass-card">
-            <span class="timeline-date">2019 - 2021</span>
-            <h3>Frontend Web Developer</h3>
-            <span class="timeline-company"><i class="fa-solid fa-building"></i> Creative Web Agency</span>
-            <p>Built custom responsive websites, interactive UI component libraries, and optimized SEO and web performance for client projects.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
 
-  <!-- Contact Section -->
-  <section class="contact section" id="contact">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> Get In Touch</span>
-        <h2 class="section-title">Let's Connect</h2>
-        <p class="section-description">Have a project in mind or want to collaborate? Send me a message!</p>
-      </div>
-
-      <div class="contact-wrapper">
-        <div class="contact-info glass-card">
-          <h3>Contact Details</h3>
-          <p>Feel free to reach out via email, social channels, or the contact form.</p>
-
-          <div class="info-list">
-            <div class="info-item">
-              <i class="fa-solid fa-envelope"></i>
-              <div>
-                <span>Email</span>
-                <a href="mailto:jisham@example.com">jisham@example.com</a>
-              </div>
-            </div>
-
-            <div class="info-item">
-              <i class="fa-brands fa-github"></i>
-              <div>
-                <span>GitHub</span>
-                <a href="https://github.com/jisham-vallikkadan" target="_blank">github.com/jisham-vallikkadan</a>
-              </div>
-            </div>
-
-            <div class="info-item">
-              <i class="fa-solid fa-location-dot"></i>
-              <div>
-                <span>Location</span>
-                <p>Global / Remote</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <form class="contact-form glass-card" id="contact-form">
-          <h3>Send Message</h3>
-          
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" required placeholder="John Doe" />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Your Email</label>
-            <input type="email" id="email" required placeholder="john@example.com" />
-          </div>
-
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" required placeholder="Project Inquiry / Opportunity" />
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" rows="5" required placeholder="Tell me about your project..."></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
-            <i class="fa-solid fa-paper-plane"></i> Send Message
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Toast Notification -->
-  <div id="toast" class="toast">
-    <i class="fa-solid fa-circle-check"></i>
-    <span id="toast-message">Message sent successfully!</span>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <p>&copy; <span id="current-year">2026</span> <strong>Jisham Vallikkadan</strong>. All rights reserved.</p>
-      <a href="#hero" class="back-to-top" aria-label="Back to top">
-        <i class="fa-solid fa-arrow-up"></i>
-      </a>
-    </div>
-  </footer>
-
-  <script type="module" src="./main.js"></script>
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
 </body>
 </html>
